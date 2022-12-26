@@ -23,8 +23,9 @@ export const Duration: React.FC = () => {
 
   return (
     <Container>
-      <h2 className="font-heading font-bold text-xl mt-6 text-center">
-        Established on{" "}
+      <h2 className="font-heading font-bold text-xl text-center">
+        Established on
+        <br />
         <time
           dateTime={datingInterval.start.toString()}
           className="text-primary"
@@ -33,7 +34,7 @@ export const Duration: React.FC = () => {
         </time>
       </h2>
       <div className="flex items-center justify-center py-6">
-        <div className="stats stats-vertical lg:stats-horizontal shadow bg-base-200">
+        <div className="stats stats-horizontal shadow bg-base-200">
           <div className="stat">
             <div className="stat-title">Years</div>
             <div className="stat-value">{years}</div>

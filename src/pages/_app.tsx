@@ -17,7 +17,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Navbar />
-      <main className={`${inter.variable} ${lexend.variable}`}>
+      <main
+        className={`${inter.variable} ${lexend.variable} flex flex-col gap-12`}
+      >
         <Component {...pageProps} />
       </main>
       <Footer />
