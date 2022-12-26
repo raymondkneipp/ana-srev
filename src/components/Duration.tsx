@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { intervalToDuration } from "date-fns";
+import { format, intervalToDuration } from "date-fns";
 import { Container } from "@components";
 
 export const Duration: React.FC = () => {
@@ -23,6 +23,15 @@ export const Duration: React.FC = () => {
 
   return (
     <Container>
+      <h2 className="font-heading font-bold text-xl mt-6 text-center">
+        Established on{" "}
+        <time
+          dateTime={datingInterval.start.toString()}
+          className="text-primary"
+        >
+          {format(datingInterval.start, "MMMM do yyyy 'at' h:mm aaa")}
+        </time>
+      </h2>
       <div className="flex items-center justify-center py-6">
         <div className="stats stats-vertical lg:stats-horizontal shadow bg-base-200">
           <div className="stat">
