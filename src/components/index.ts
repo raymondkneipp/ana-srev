@@ -5,3 +5,4 @@ export * from "./Hero";
 export * from "./Duration";
 export * from "./GetAffirmation";
 export * from "./Gallery";
+export * from "./Love";
