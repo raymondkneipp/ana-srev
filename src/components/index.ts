@@ -6,3 +6,5 @@ export * from "./Duration";
 export * from "./GetAffirmation";
 export * from "./Gallery";
 export * from "./Love";
+export * from "./Otter";
+export * from "./Heart";

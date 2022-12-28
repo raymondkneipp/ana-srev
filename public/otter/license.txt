@@ -1,0 +1,11 @@
+Model Information:
+* title:	otter
+* source:	https://sketchfab.com/3d-models/otter-c02c4565e0be460686895c314637d53f
+* author:	sneakyraccoon (https://sketchfab.com/sneakyraccoon)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "otter" (https://sketchfab.com/3d-models/otter-c02c4565e0be460686895c314637d53f) by sneakyraccoon (https://sketchfab.com/sneakyraccoon) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
