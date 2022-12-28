@@ -26,17 +26,17 @@ export const Love: React.FC = () => {
     <div className="flex flex-col gap-6">
       <Marquee gradient={false} speed={20}>
         {chunkOne.map((item) => (
-          <LoveItem>{item}</LoveItem>
+          <LoveItem key={item}>{item}</LoveItem>
         ))}
       </Marquee>
       <Marquee gradient={false} speed={25} direction="right">
         {chunkTwo.map((item) => (
-          <LoveItem>{item}</LoveItem>
+          <LoveItem key={item}>{item}</LoveItem>
         ))}
       </Marquee>
       <Marquee gradient={false} speed={15}>
         {chunkThree.map((item) => (
-          <LoveItem>{item}</LoveItem>
+          <LoveItem key={item}>{item}</LoveItem>
         ))}
       </Marquee>
     </div>

@@ -7,7 +7,10 @@ export const Gallery: React.FC = () => {
     <Container>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {GALLERY.map((photo) => (
-          <div className="card card-compact bg-base-200 shadow-xl">
+          <div
+            className="card card-compact bg-base-200 shadow-xl"
+            key={photo.src}
+          >
             <figure>
               <Image
                 src={photo.src}

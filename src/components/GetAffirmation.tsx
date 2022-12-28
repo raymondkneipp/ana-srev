@@ -4,15 +4,11 @@ import Image from "next/image";
 import { useState } from "react";
 
 export const GetAffirmation: React.FC = () => {
-  const [randomAffirmation, setRandomAffirmation] = useState(
-    AFFIRMATIONS[Math.floor(Math.random() * AFFIRMATIONS.length)]
-  );
+  const [randomAffirmation, setRandomAffirmation] = useState(AFFIRMATIONS[0]);
 
   const [deliveredTime, setDeliveredTime] = useState(new Date());
 
-  const [randomQuestion, setRandomQuestion] = useState(
-    QUESTION[Math.floor(Math.random() * QUESTION.length)]
-  );
+  const [randomQuestion, setRandomQuestion] = useState(QUESTION[0]);
 
   return (
     <>

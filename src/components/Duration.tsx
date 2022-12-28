@@ -9,7 +9,7 @@ export const Duration: React.FC = () => {
   };
 
   const [{ years, months, days, hours, minutes, seconds }, setDatingDuration] =
-    useState(intervalToDuration(datingInterval));
+    useState(intervalToDuration({ start: new Date(), end: new Date() }));
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -19,7 +19,7 @@ export const Duration: React.FC = () => {
     return () => {
       clearInterval(interval);
     };
-  });
+  }, []);
 
   return (
     <Container>
