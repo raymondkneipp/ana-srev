@@ -51,7 +51,7 @@ export const GetAffirmation: React.FC = () => {
                 {format(deliveredTime, "HH:mm aaa")}
               </time>
             </div>
-            <div className="chat-bubble">{randomQuestion}</div>
+            <div className="chat-bubble text-left">{randomQuestion}</div>
           </div>
           <div className="chat chat-end">
             <div className="chat-image avatar">
@@ -70,7 +70,7 @@ export const GetAffirmation: React.FC = () => {
                 {format(deliveredTime, "HH:mm aaa")}
               </time>
             </div>
-            <div className="chat-bubble">{randomAffirmation}</div>
+            <div className="chat-bubble text-left">{randomAffirmation}</div>
           </div>
         </label>
       </label>
