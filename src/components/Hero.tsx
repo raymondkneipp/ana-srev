@@ -18,7 +18,7 @@ export const Hero: React.FC = () => {
           </h1>
         </div>
 
-        <div className="h-[26rem] w-screen grid place-items-center">
+        <div className="h-[26rem] w-screen grid place-items-center opacity-75">
           <Canvas
             shadows
             dpr={[1, 2]}
