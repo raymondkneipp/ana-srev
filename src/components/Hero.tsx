@@ -1,4 +1,4 @@
-import { GetAffirmation, Heart, Loading, Otter } from "@components";
+import { GetAffirmation, Heart, Otter } from "@components";
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Environment, Html, useProgress } from "@react-three/drei";
