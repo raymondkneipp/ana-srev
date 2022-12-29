@@ -1,9 +1,10 @@
-import { GetAffirmation, Heart, Otter } from "@components";
+import { GetAffirmation, Heart, Loading, Otter } from "@components";
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { Environment } from "@react-three/drei";
+import { Environment, Html, useProgress } from "@react-three/drei";
 
 export const Hero: React.FC = () => {
+  const { progress } = useProgress();
   return (
     <div
       className="hero min-h-screen"
@@ -31,7 +32,18 @@ export const Hero: React.FC = () => {
               position={[10, 15, 10]}
               castShadow
             />
-            <Suspense fallback={null}>
+            <Suspense
+              fallback={
+                <Html center>
+                  <div
+                    className="radial-progress"
+                    style={{ "--value": progress } as any}
+                  >
+                    {progress}%
+                  </div>
+                </Html>
+              }
+            >
               <Heart />
               <Otter />
               <Environment preset="city" />
