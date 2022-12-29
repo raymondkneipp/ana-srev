@@ -8,12 +8,19 @@ export const Duration: React.FC = () => {
     end: new Date(),
   };
 
-  const [{ years, months, days, hours, minutes, seconds }, setDatingDuration] =
-    useState(intervalToDuration({ start: new Date(), end: new Date() }));
+  const [interval, setDatingDuration] = useState(
+    intervalToDuration({ start: new Date(), end: new Date() })
+  );
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setDatingDuration(intervalToDuration(datingInterval));
+      setDatingDuration(
+        intervalToDuration({
+          start: new Date(2020, 6, 24, 22, 50, 0),
+          end: new Date(),
+        })
+      );
+      console.log("running");
     }, 1000);
 
     return () => {
@@ -37,37 +44,61 @@ export const Duration: React.FC = () => {
         <div className="stats stats-horizontal shadow bg-base-200">
           <div className="stat">
             <div className="stat-title">Years</div>
-            <div className="stat-value">{years}</div>
+            <div className="stat-value">
+              <span className="countdown font-mono font-bold">
+                <span style={{ "--value": interval.years } as any}></span>
+              </span>
+            </div>
             <div className="stat-desc">magical</div>
           </div>
 
           <div className="stat">
             <div className="stat-title">Months</div>
-            <div className="stat-value">{months}</div>
+            <div className="stat-value">
+              <span className="countdown font-mono font-bold">
+                <span style={{ "--value": interval.months } as any}></span>
+              </span>
+            </div>
             <div className="stat-desc">wonderful</div>
           </div>
 
           <div className="stat">
             <div className="stat-title">Days</div>
-            <div className="stat-value">{days}</div>
+            <div className="stat-value">
+              <span className="countdown font-mono font-bold">
+                <span style={{ "--value": interval.days } as any}></span>
+              </span>
+            </div>
             <div className="stat-desc">amazing</div>
           </div>
 
           <div className="stat">
             <div className="stat-title">Hours</div>
-            <div className="stat-value">{hours}</div>
+            <div className="stat-value">
+              <span className="countdown font-mono font-bold">
+                <span style={{ "--value": interval.hours } as any}></span>
+              </span>
+            </div>
             <div className="stat-desc">happy</div>
           </div>
 
           <div className="stat">
             <div className="stat-title">Minutes</div>
-            <div className="stat-value">{minutes}</div>
+            <div className="stat-value">
+              <span className="countdown font-mono font-bold">
+                <span style={{ "--value": interval.minutes } as any}></span>
+              </span>
+            </div>
             <div className="stat-desc">comforting</div>
           </div>
 
           <div className="stat">
             <div className="stat-title">Seconds</div>
-            <div className="stat-value">{seconds}</div>
+            <div className="stat-value">
+              <span className="countdown font-mono font-bold">
+                <span style={{ "--value": interval.seconds } as any}></span>
+              </span>
+            </div>
             <div className="stat-desc">blessed</div>
           </div>
         </div>

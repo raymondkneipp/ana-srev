@@ -18,7 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <Navbar />
       <main
-        className={`${inter.variable} ${lexend.variable} flex flex-col gap-12`}
+        className={`${inter.variable} ${lexend.variable} flex flex-col gap-12 overflow-x-hidden`}
       >
         <Component {...pageProps} />
       </main>
