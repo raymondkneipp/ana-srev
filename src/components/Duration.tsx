@@ -30,16 +30,22 @@ export const Duration: React.FC = () => {
 
   return (
     <Container>
-      <h2 className="font-heading font-bold text-xl text-center">
-        Established on
-        <br />
-        <time
-          dateTime={datingInterval.start.toString()}
-          className="text-primary"
-        >
-          {format(datingInterval.start, "MMMM do yyyy 'at' h:mm aaa")}
-        </time>
-      </h2>
+      <div className="flex flex-col gap-1">
+        <h2 className="font-heading font-bold text-xl text-center text-primary">
+          Established on
+          <br />
+        </h2>
+
+        <span className="badge badge-primary mx-auto">
+          <time
+            dateTime={datingInterval.start.toString()}
+            className="font-body text-center"
+          >
+            {format(datingInterval.start, "MMMM do yyyy 'at' h:mm aaa")}
+          </time>
+        </span>
+      </div>
+
       <div className="flex items-center justify-center py-6">
         <div className="stats stats-horizontal shadow bg-base-200">
           <div className="stat">

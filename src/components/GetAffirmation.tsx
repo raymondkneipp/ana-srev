@@ -70,7 +70,9 @@ export const GetAffirmation: React.FC = () => {
                 {format(deliveredTime, "HH:mm aaa")}
               </time>
             </div>
-            <div className="chat-bubble text-left">{randomAffirmation}</div>
+            <div className="chat-bubble text-left chat-bubble-info">
+              {randomAffirmation}
+            </div>
           </div>
         </label>
       </label>
